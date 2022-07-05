@@ -5,9 +5,8 @@ import datetime as dt
 import traceback
 from PIL import Image
 from IPython.display import display
-from urllib.parse import quote
 
-# Constants
+# Chart Constants
 CONFIRMADOS = 0
 OBITOS = 1
 RECUPERADOS = 2
@@ -57,7 +56,7 @@ def get_api_result():
         for obs in final_data[1::10]:
             y_data_2.append(obs[RECUPERADOS])   # Append the RECUPERADOS data to the list
 
-        labels = ['Confirmados', 'Recuperados']  # Create a list to store the labels
+        labels = ['Confirmed', 'Recovered']  # Create a list to store the labels
 
         x = []  # Create a list to store the X-Axis data (DATA)
         for obs in final_data[1::10]:
@@ -143,14 +142,6 @@ def display_image(path):
     img_pil = Image.open(path)
     display(img_pil)
 
-
-def get_api_qrcode(link):
-
-    text = quote(link)  # parsing the link to be able to use it in the qrcode
-    base_url = 'https://quickchart.io/qr'
-
-    response = requests.get(f'{base_url}?text={text}')
-    return response.content
 
 
 
