@@ -6,7 +6,7 @@ Aplicação para visualização de dados do número de casos Confirmados e Recup
 Application for viewing data on the number of Confirmed and Recovered cases
 (every 10 days) of COVID-19 in Brazil, displaying the updated data in a bar graph.
 
-## APIs Utilizadas
+## APIs Utilizadas / Used APIs 
 
 - [API COVID-19](https://api.covid19api.com)
 - [Quickchart.io](https://quickchart.io)
